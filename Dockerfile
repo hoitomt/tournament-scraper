@@ -4,8 +4,7 @@ RUN mkdir /workdir
 
 WORKDIR /workdir
 
-COPY requirements.txt requirements.txt
-
 RUN apt-get update && apt-get install -y jq
 
+COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
